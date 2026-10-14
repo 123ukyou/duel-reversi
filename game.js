@@ -1812,11 +1812,17 @@ canPlace(r, c, color, activeItem = null) {
       if (cell.color === color) return false; // 自分の色の上には置けない
     }
 
-    // ★【神機能ブロッキング復活】同じマスに両者のカーソルが重なっている場合は配置不可！
+    // ★【神機能ブロッキング復活 ＆ 稲妻演出】同じマスに両者のカーソルが重なっている場合は配置不可！
     if (this.mode === 'PVP_LOCAL' || this.mode === 'PVP_ONLINE' || this.mode === 'PVP') {
       if (this.p1.cursor.r === r && this.p1.cursor.c === c && 
           this.p2.cursor.r === r && this.p2.cursor.c === c) {
-        return false; // 両者のカーソルが完全バッティング中は置けない！
+        
+        // ⚡ ここで稲妻と画面シェイクをド派手に発動！
+        this.addLightning(r, c);          // そのマスに稲妻を落とす
+        this.triggerScreenShake(12);      // 画面をガツンと揺らす
+        try { audio.playLightningBoom(); } catch(e) {} // 雷鳴効果音
+        
+        return; // 両者のカーソルが完全バッティング中は置けない！
       }
     }
 
@@ -1944,13 +1950,34 @@ canPlace(r, c, color, activeItem = null) {
         break;
     }
   }
-  executeMove(player, r, c, fromNetwork = false) {
+executeMove(player, r, c, fromNetwork = false) {
     if (!fromNetwork) {
       if (player.cooldown > 0 && player.hyperTimer <= 0) return false;
       if (player.freezeTimer > 0 || player.stunTimer > 0) return false;
     }
 
+    // ★カーソルが重なっていて置けなかった時だけ、控えめに6本の雷を落とす
+    if (this.mode === 'PVP_LOCAL' || this.mode === 'PVP_ONLINE' || this.mode === 'PVP') {
+      if (this.p1.cursor.r === r && this.p1.cursor.c === c && 
+          this.p2.cursor.r === r && this.p2.cursor.c === c) {
+        
+        const pos = this.cellToPixel(r, c);
+        
+        // ⚡ 稲妻の本数を6本だけに制限してスッキリさせる！
+        for (let i = 0; i < 6; i++) {
+          this.addLightning(r, c);
+        }
+        
+        this.triggerScreenShake(6); // 揺れもマイルドに
+        this.addFloatingText('⚡ ブロッキング発動！', '#facc15', pos.x, pos.y - 30, 1.1);
+        try { audio.playClick(); } catch(e) {}
+        
+        return false; // 置けない！
+      }
+    }
+
     const activeItem = player.nextItem;
+    // ...（以降の処理が続く）
     if (!fromNetwork && !this.canPlace(r, c, player.color, activeItem)) return false;
 
     const cell = this.board[r][c];
