@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>DUEL REVERSI - 魔導神話決闘 [3D立体演出 & P2P Online Edition]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- PeerJS (WebRTC P2P Direct Engine) -->
+<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js" defer></script>
+</head>
+<body>
+<div id="game-container">
+  <canvas id="gameCanvas" width="1280" height="720"></canvas>
+  <input type="file" id="bossCustomImageInput" accept="image/*" style="display:none">
+
+  <!-- 左上クイックツールバー (P2P通信ロビー ＆ 310種ドット絵図鑑リンク) -->
+  <div id="quick-overlay-bar">
+    <button id="p2p-floating-btn" class="magic-overlay-btn" title="離れた友達とP2Pオンライン対戦">🌐 P2Pオンライン通信</button>
+    <a href="dot_art_viewer.html" target="_blank" class="magic-overlay-btn catalog-link-btn" title="全310種の10×10ドットアート図鑑を開く">🎨 310種ドット絵図鑑</a>
+  </div>
+
+  <!-- P2Pオンライン決闘ロビーモーダル -->
+  <div id="p2p-lobby-modal" class="p2p-modal-overlay hidden">
+    <div class="p2p-modal-card">
+      <div class="p2p-modal-header">
+        <h2>🌐 魔導P2Pオンライン決闘ロビー <span class="p2p-badge">サーバーレス・遅延ゼロ同期</span></h2>
+        <button id="p2p-close-btn" class="p2p-close">&times;</button>
+      </div>
+      <div class="p2p-status-bar">
+        <span id="p2p-status-dot" class="p2p-dot offline"></span>
+        <span id="p2p-status-text">待機中: 部屋を作る(1P/黒)か、友達のルームIDを入力して参加(2P/白)してください</span>
+      </div>
+      <div class="p2p-grid">
+        <div class="p2p-panel">
+          <h3>👑 ホストとして部屋を作る (1P / 黒)</h3>
+          <p>ルームIDを発行します。接続後、決闘設定画面で「通常2×2」や「310種ドット絵」を選んで試合開始すると相手の画面も同時に始まります！</p>
+          <button id="p2p-create-btn" class="p2p-action-btn host-btn">✨ ルームIDを発行する</button>
+          <div id="p2p-host-box" class="p2p-code-box hidden">
+            <div class="p2p-code-label">あなたのルームID</div>
+            <div id="p2p-host-code" class="p2p-code-val">DUEL-0000</div>
+            <div class="p2p-code-btns">
+              <button id="p2p-copy-id" class="p2p-sub-btn">📋 IDをコピー</button>
+              <button id="p2p-copy-url" class="p2p-sub-btn">🔗 招待URLコピー</button>
+            </div>
+          </div>
+        </div>
+        <div class="p2p-panel">
+          <h3>⚔️ ゲストとして参加する (2P / 白)</h3>
+          <p>ホストから教えてもらったルームIDを入力して接続します。オンライン時はマウス・WASD・矢印キーのどれでも2Pを操作できます！</p>
+          <input type="text" id="p2p-room-input" class="p2p-input" placeholder="例: DUEL-1234" maxlength="16">
+          <button id="p2p-join-btn" class="p2p-action-btn join-btn">🚀 この部屋に接続する</button>
+        </div>
+      </div>
+      <div class="p2p-modal-footer">
+        <button id="p2p-disconnect-btn" class="p2p-sub-btn danger hidden">通信を切断してローカルに戻る</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="dot_art_library.js"></script>
+<script src="sound.js"></script>
+<script src="network.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

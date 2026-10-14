@@ -1,0 +1,48184 @@
+/**
+ * DUEL REVERSI - 10x10 Full-Canvas Extended Dot Art Library (310 Guaranteed Patterns)
+ * Strictly satisfies:
+ * 1. Black stones == White stones (Equal balance: 1:1)
+ * 2. Opening legal moves >= 4 guaranteed for both players (0.00% pass lock)
+ * 3. 10x10 high-resolution full-canvas layout
+ */
+
+const DOT_ART_LIBRARY = {
+  "LETTER_A": {
+    "id": "LETTER_A",
+    "name": "アルファベット: A",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 8,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_B": {
+    "id": "LETTER_B",
+    "name": "アルファベット: B",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 11,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_C": {
+    "id": "LETTER_C",
+    "name": "アルファベット: C",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 5,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_D": {
+    "id": "LETTER_D",
+    "name": "アルファベット: D",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_E": {
+    "id": "LETTER_E",
+    "name": "アルファベット: E",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 6,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_F": {
+    "id": "LETTER_F",
+    "name": "アルファベット: F",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_G": {
+    "id": "LETTER_G",
+    "name": "アルファベット: G",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 8,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_H": {
+    "id": "LETTER_H",
+    "name": "アルファベット: H",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_I": {
+    "id": "LETTER_I",
+    "name": "アルファベット: I",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_J": {
+    "id": "LETTER_J",
+    "name": "アルファベット: J",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_K": {
+    "id": "LETTER_K",
+    "name": "アルファベット: K",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 17,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_L": {
+    "id": "LETTER_L",
+    "name": "アルファベット: L",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_M": {
+    "id": "LETTER_M",
+    "name": "アルファベット: M",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 7,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_N": {
+    "id": "LETTER_N",
+    "name": "アルファベット: N",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_O": {
+    "id": "LETTER_O",
+    "name": "アルファベット: O",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 8,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_P": {
+    "id": "LETTER_P",
+    "name": "アルファベット: P",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 5,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_Q": {
+    "id": "LETTER_Q",
+    "name": "アルファベット: Q",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_R": {
+    "id": "LETTER_R",
+    "name": "アルファベット: R",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_S": {
+    "id": "LETTER_S",
+    "name": "アルファベット: S",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_T": {
+    "id": "LETTER_T",
+    "name": "アルファベット: T",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_U": {
+    "id": "LETTER_U",
+    "name": "アルファベット: U",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      }
+    ]
+  },
+  "LETTER_V": {
+    "id": "LETTER_V",
+    "name": "アルファベット: V",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      }
+    ]
+  },
+  "LETTER_W": {
+    "id": "LETTER_W",
+    "name": "アルファベット: W",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 7,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_X": {
+    "id": "LETTER_X",
+    "name": "アルファベット: X",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      }
+    ]
+  },
+  "LETTER_Y": {
+    "id": "LETTER_Y",
+    "name": "アルファベット: Y",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 12,
+    "blackCount": 6,
+    "whiteCount": 6,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "LETTER_Z": {
+    "id": "LETTER_Z",
+    "name": "アルファベット: Z",
+    "category": "ALPHABET",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_0": {
+    "id": "NUM_0",
+    "name": "数字: 0",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 7,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_1": {
+    "id": "NUM_1",
+    "name": "数字: 1",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 11,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_2": {
+    "id": "NUM_2",
+    "name": "数字: 2",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_3": {
+    "id": "NUM_3",
+    "name": "数字: 3",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 7,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_4": {
+    "id": "NUM_4",
+    "name": "数字: 4",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 8,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_5": {
+    "id": "NUM_5",
+    "name": "数字: 5",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 10,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_6": {
+    "id": "NUM_6",
+    "name": "数字: 6",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 10,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_7": {
+    "id": "NUM_7",
+    "name": "数字: 7",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_8": {
+    "id": "NUM_8",
+    "name": "数字: 8",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 9,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NUM_9": {
+    "id": "NUM_9",
+    "name": "数字: 9",
+    "category": "NUMBER",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_INVADER_A": {
+    "id": "GAME_INVADER_A",
+    "name": "インベーダー (砲台型)",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_INVADER_B": {
+    "id": "GAME_INVADER_B",
+    "name": "インベーダー (触手型)",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_PACMAN": {
+    "id": "GAME_PACMAN",
+    "name": "パックマン",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_GHOST": {
+    "id": "GAME_GHOST",
+    "name": "モンスターゴースト",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 19,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_CHERRY": {
+    "id": "GAME_CHERRY",
+    "name": "ボーナスチェリー",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 24,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_I": {
+    "id": "TETRIS_I",
+    "name": "テトリス: I型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_O": {
+    "id": "TETRIS_O",
+    "name": "テトリス: O型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_T": {
+    "id": "TETRIS_T",
+    "name": "テトリス: T型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_S": {
+    "id": "TETRIS_S",
+    "name": "テトリス: S型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_Z": {
+    "id": "TETRIS_Z",
+    "name": "テトリス: Z型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_J": {
+    "id": "TETRIS_J",
+    "name": "テトリス: J型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TETRIS_L": {
+    "id": "TETRIS_L",
+    "name": "テトリス: L型",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_MUSHROOM": {
+    "id": "GAME_MUSHROOM",
+    "name": "スーパーキノコ",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_1UP": {
+    "id": "GAME_1UP",
+    "name": "1UPキノコ",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_STAR": {
+    "id": "GAME_STAR",
+    "name": "無敵スーパースター",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_FLOWER": {
+    "id": "GAME_FLOWER",
+    "name": "ファイアフラワー",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_COIN": {
+    "id": "GAME_COIN",
+    "name": "ゴールドコイン",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_QBLOCK": {
+    "id": "GAME_QBLOCK",
+    "name": "ハテナブロック [?]",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 23,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_TRIFORCE": {
+    "id": "GAME_TRIFORCE",
+    "name": "神虎トライフォース",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 17,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_MASTER_SWORD": {
+    "id": "GAME_MASTER_SWORD",
+    "name": "伝説の退魔剣",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 8,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_HYLIAN_SHIELD": {
+    "id": "GAME_HYLIAN_SHIELD",
+    "name": "勇者の紋章盾",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_POKEBALL": {
+    "id": "GAME_POKEBALL",
+    "name": "モンスターボール",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_GREATBALL": {
+    "id": "GAME_GREATBALL",
+    "name": "スーパーボール",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_SLIME": {
+    "id": "GAME_SLIME",
+    "name": "スライム",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_KING_SLIME": {
+    "id": "GAME_KING_SLIME",
+    "name": "キングスライム",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 24,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_HEART": {
+    "id": "GAME_HEART",
+    "name": "ハートの器",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_POTION": {
+    "id": "GAME_POTION",
+    "name": "魔法ポーション瓶",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_BOBOMB": {
+    "id": "GAME_BOBOMB",
+    "name": "爆弾ボム兵",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 17,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_GOOMBA": {
+    "id": "GAME_GOOMBA",
+    "name": "クリボー風モンスター",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_DPAD": {
+    "id": "GAME_DPAD",
+    "name": "レトロ十字キー",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_GAMEBOY": {
+    "id": "GAME_GAMEBOY",
+    "name": "初代携帯ゲーム機",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 16,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_JOYSTICK": {
+    "id": "GAME_JOYSTICK",
+    "name": "アーケードスティック",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_CHEST": {
+    "id": "GAME_CHEST",
+    "name": "ダンジョンの宝箱",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 25,
+    "p2Moves": 26,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_SKULL_COIN": {
+    "id": "GAME_SKULL_COIN",
+    "name": "ドクロコイン",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 16,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "GAME_RUBY": {
+    "id": "GAME_RUBY",
+    "name": "ルビージュエル",
+    "category": "GAME",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_APPLE": {
+    "id": "TECH_APPLE",
+    "name": "アップル風リンゴ",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 20,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_WINDOWS": {
+    "id": "TECH_WINDOWS",
+    "name": "ウィンドウズ風4窓",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 33,
+    "p2Moves": 33,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_PS_CIRCLE": {
+    "id": "TECH_PS_CIRCLE",
+    "name": "プレイステーション: ○",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_PS_CROSS": {
+    "id": "TECH_PS_CROSS",
+    "name": "プレイステーション: ×",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_PS_TRIANGLE": {
+    "id": "TECH_PS_TRIANGLE",
+    "name": "プレイステーション: △",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      }
+    ]
+  },
+  "TECH_PS_SQUARE": {
+    "id": "TECH_PS_SQUARE",
+    "name": "プレイステーション: □",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_XBOX": {
+    "id": "TECH_XBOX",
+    "name": "エックスボックス: X",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_DISCORD": {
+    "id": "TECH_DISCORD",
+    "name": "ディスコード風コントローラ",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_TWITTER_X": {
+    "id": "TECH_TWITTER_X",
+    "name": "エックス (Xロゴ)",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_CHROME": {
+    "id": "TECH_CHROME",
+    "name": "クローム風サークル",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_GITHUB": {
+    "id": "TECH_GITHUB",
+    "name": "ギットハブ風オクトキャット",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_YOUTUBE": {
+    "id": "TECH_YOUTUBE",
+    "name": "ユーチューブ再生ボタン",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 48,
+    "blackCount": 24,
+    "whiteCount": 24,
+    "p1Moves": 30,
+    "p2Moves": 27,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_WIFI": {
+    "id": "TECH_WIFI",
+    "name": "Wi-Fi電波アイコン",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      }
+    ]
+  },
+  "TECH_BLUETOOTH": {
+    "id": "TECH_BLUETOOTH",
+    "name": "ブルートゥース符牒",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 7,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_POWER": {
+    "id": "TECH_POWER",
+    "name": "電源ON/OFFシンボル",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      }
+    ]
+  },
+  "TECH_GEAR": {
+    "id": "TECH_GEAR",
+    "name": "設定システム歯車",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_CLOUD": {
+    "id": "TECH_CLOUD",
+    "name": "クラウドネットワーク",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_SEARCH": {
+    "id": "TECH_SEARCH",
+    "name": "検索虫眼鏡レンズ",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 11,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_PHONE": {
+    "id": "TECH_PHONE",
+    "name": "スマートフォン",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_LAPTOP": {
+    "id": "TECH_LAPTOP",
+    "name": "ノートPC",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_ROBOT": {
+    "id": "TECH_ROBOT",
+    "name": "ドロイドロボヘッド",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_BATTERY": {
+    "id": "TECH_BATTERY",
+    "name": "バッテリー電池残量",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_BELL": {
+    "id": "TECH_BELL",
+    "name": "プッシュ通知ベル",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_MAIL": {
+    "id": "TECH_MAIL",
+    "name": "電子メール封筒",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 27,
+    "p2Moves": 27,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_SPEAKER": {
+    "id": "TECH_SPEAKER",
+    "name": "サウンドスピーカー",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 17,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_LOCK": {
+    "id": "TECH_LOCK",
+    "name": "セキュリティ南京錠",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_KEY": {
+    "id": "TECH_KEY",
+    "name": "暗号化秘密鍵",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 8,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_MIC": {
+    "id": "TECH_MIC",
+    "name": "ボイスマイク",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 15,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_MOUSE": {
+    "id": "TECH_MOUSE",
+    "name": "PCマウス",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_CURSOR": {
+    "id": "TECH_CURSOR",
+    "name": "マウスポインター矢印",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 17,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_FOLDER": {
+    "id": "TECH_FOLDER",
+    "name": "データフォルダー",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_DATABASE": {
+    "id": "TECH_DATABASE",
+    "name": "クラウドデータベース",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      }
+    ]
+  },
+  "TECH_ANCHOR": {
+    "id": "TECH_ANCHOR",
+    "name": "リンクアンカー(錨)",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 14,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_GLOBE": {
+    "id": "TECH_GLOBE",
+    "name": "ワールドワイドウェブ",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "TECH_CODE": {
+    "id": "TECH_CODE",
+    "name": "ソースコードタグ </>",
+    "category": "TECH",
+    "gridSize": 10,
+    "totalStones": 10,
+    "blackCount": 5,
+    "whiteCount": 5,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_HEART": {
+    "id": "SYM_HEART",
+    "name": "情熱のハート",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_SPADE": {
+    "id": "SYM_SPADE",
+    "name": "漆黒のスペード",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 26,
+    "p2Moves": 26,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_DIAMOND": {
+    "id": "SYM_DIAMOND",
+    "name": "金剛のダイヤ",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_CLUB": {
+    "id": "SYM_CLUB",
+    "name": "三ツ葉のクラブ",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_STAR_5": {
+    "id": "SYM_STAR_5",
+    "name": "五芒星の輝き",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_HEXAGRAM": {
+    "id": "SYM_HEXAGRAM",
+    "name": "神秘の六芒星",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_CROSS": {
+    "id": "SYM_CROSS",
+    "name": "聖なる十字架",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_SUN": {
+    "id": "SYM_SUN",
+    "name": "太陽の光輪",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 22,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_CRESCENT": {
+    "id": "SYM_CRESCENT",
+    "name": "夜空の三日月",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 15,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_YIN_YANG": {
+    "id": "SYM_YIN_YANG",
+    "name": "陰陽の太極図",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 21,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_INFINITY": {
+    "id": "SYM_INFINITY",
+    "name": "無限大ループ ∞",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_PEACE": {
+    "id": "SYM_PEACE",
+    "name": "平和のピースマーク",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      }
+    ]
+  },
+  "SYM_ARROW_UP": {
+    "id": "SYM_ARROW_UP",
+    "name": "上昇の矢印 ↑",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_ARROW_DOWN": {
+    "id": "SYM_ARROW_DOWN",
+    "name": "下降の矢印 ↓",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_ARROW_LEFT": {
+    "id": "SYM_ARROW_LEFT",
+    "name": "左折の矢印 ←",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 13,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_ARROW_RIGHT": {
+    "id": "SYM_ARROW_RIGHT",
+    "name": "右折の矢印 →",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 13,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_TARGET": {
+    "id": "SYM_TARGET",
+    "name": "照準サークル",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 9,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_BULLSEYE": {
+    "id": "SYM_BULLSEYE",
+    "name": "二重円的",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_CHECKER": {
+    "id": "SYM_CHECKER",
+    "name": "チェッカー模様",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_RIBBON": {
+    "id": "SYM_RIBBON",
+    "name": "祝福のリボン",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_TREBLE_CLEF": {
+    "id": "SYM_TREBLE_CLEF",
+    "name": "音楽ト音記号",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 12,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_NOTE": {
+    "id": "SYM_NOTE",
+    "name": "跳ねる八分音符",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 14,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_EXCLAMATION": {
+    "id": "SYM_EXCLAMATION",
+    "name": "感嘆符！",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_QUESTION": {
+    "id": "SYM_QUESTION",
+    "name": "疑問符？",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 12,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_PERCENT": {
+    "id": "SYM_PERCENT",
+    "name": "百分率 ％",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 8,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_HASH": {
+    "id": "SYM_HASH",
+    "name": "シャープ ＃",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_ASTERISK": {
+    "id": "SYM_ASTERISK",
+    "name": "アスタリスク ＊",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 13,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_OMEGA": {
+    "id": "SYM_OMEGA",
+    "name": "ギリシャ文字: Ω",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_DELTA": {
+    "id": "SYM_DELTA",
+    "name": "ギリシャ文字: Δ",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      }
+    ]
+  },
+  "SYM_SIGMA": {
+    "id": "SYM_SIGMA",
+    "name": "ギリシャ文字: Σ",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_HOURGLASS": {
+    "id": "SYM_HOURGLASS",
+    "name": "時を刻む砂時計",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_ANCHOR": {
+    "id": "SYM_ANCHOR",
+    "name": "船乗りの錨",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 12,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_LIGHTNING": {
+    "id": "SYM_LIGHTNING",
+    "name": "電光石火の稲妻",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 13,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_SHIELD_SYM": {
+    "id": "SYM_SHIELD_SYM",
+    "name": "守護のシンボル",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 42,
+    "blackCount": 21,
+    "whiteCount": 21,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_CROWN_SYM": {
+    "id": "SYM_CROWN_SYM",
+    "name": "威厳の王冠",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 24,
+    "p2Moves": 26,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_SKULL_SYM": {
+    "id": "SYM_SKULL_SYM",
+    "name": "終焉のドクロ",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 13,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_SWORD_SYM": {
+    "id": "SYM_SWORD_SYM",
+    "name": "決闘の交差剣",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 15,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_EYE_SYM": {
+    "id": "SYM_EYE_SYM",
+    "name": "真実の目",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 15,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_MOON_STAR": {
+    "id": "SYM_MOON_STAR",
+    "name": "月と星の導き",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 17,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SYM_FLAME_SYM": {
+    "id": "SYM_FLAME_SYM",
+    "name": "命の火炎",
+    "category": "SYMBOL",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_EXCALIBUR": {
+    "id": "ITEM_EXCALIBUR",
+    "name": "約束された勝利の剣",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 8,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_GREATSWORD": {
+    "id": "ITEM_GREATSWORD",
+    "name": "暗黒大剣",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_TOWER_SHIELD": {
+    "id": "ITEM_TOWER_SHIELD",
+    "name": "金剛タワーシールド",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 22,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_MAGE_HAT": {
+    "id": "ITEM_MAGE_HAT",
+    "name": "大魔法使いの三角帽子",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 19,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_STAFF": {
+    "id": "ITEM_STAFF",
+    "name": "賢者の宝珠杖",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_BOW": {
+    "id": "ITEM_BOW",
+    "name": "狩人の大弓",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      }
+    ]
+  },
+  "ITEM_AXE": {
+    "id": "ITEM_AXE",
+    "name": "ドワーフの戦斧",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 6,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_GRAIL": {
+    "id": "ITEM_GRAIL",
+    "name": "万能の聖杯",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_MAGIC_KEY": {
+    "id": "ITEM_MAGIC_KEY",
+    "name": "次元を開く鍵",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 7,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_SCROLL": {
+    "id": "ITEM_SCROLL",
+    "name": "古代の魔法巻物",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 22,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_CIRCLE_RUNE": {
+    "id": "ITEM_CIRCLE_RUNE",
+    "name": "賢者の召喚魔法陣",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_TORCH": {
+    "id": "ITEM_TORCH",
+    "name": "洞窟の松明",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_LANTERN": {
+    "id": "ITEM_LANTERN",
+    "name": "カンテラ灯火",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_ORB": {
+    "id": "ITEM_ORB",
+    "name": "預言の水晶球",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_GRIMOIRE": {
+    "id": "ITEM_GRIMOIRE",
+    "name": "禁断の魔導書",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 48,
+    "blackCount": 24,
+    "whiteCount": 24,
+    "p1Moves": 26,
+    "p2Moves": 26,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_WINGS": {
+    "id": "ITEM_WINGS",
+    "name": "大天使の純白翼",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_DEVIL_WINGS": {
+    "id": "ITEM_DEVIL_WINGS",
+    "name": "魔王の漆黒蝙蝠翼",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_GOLD_APPLE": {
+    "id": "ITEM_GOLD_APPLE",
+    "name": "神話の黄金林檎",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 22,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_RING": {
+    "id": "ITEM_RING",
+    "name": "支配の魔導指輪",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_AMULET": {
+    "id": "ITEM_AMULET",
+    "name": "深緑のアミュレット",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_HELMET": {
+    "id": "ITEM_HELMET",
+    "name": "重装騎士の兜",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_DAGGER": {
+    "id": "ITEM_DAGGER",
+    "name": "暗殺者の短剣",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_HAMMER": {
+    "id": "ITEM_HAMMER",
+    "name": "雷神の大槌",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_SPEAR": {
+    "id": "ITEM_SPEAR",
+    "name": "竜殺しの長槍",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 14,
+    "blackCount": 7,
+    "whiteCount": 7,
+    "p1Moves": 6,
+    "p2Moves": 6,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      }
+    ]
+  },
+  "ITEM_SCYTHE": {
+    "id": "ITEM_SCYTHE",
+    "name": "死神の大鎌",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 12,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_FANG": {
+    "id": "ITEM_FANG",
+    "name": "ドラゴンの鋭牙",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_FEATHER": {
+    "id": "ITEM_FEATHER",
+    "name": "不死鳥の尾羽",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 13,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_COMPASS": {
+    "id": "ITEM_COMPASS",
+    "name": "迷宮の羅針盤",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 27,
+    "p2Moves": 27,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_SCALE": {
+    "id": "ITEM_SCALE",
+    "name": "審判の正義天秤",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 7,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_MIRROR": {
+    "id": "ITEM_MIRROR",
+    "name": "真実を映す魔鏡",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 9,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_CRYSTAL": {
+    "id": "ITEM_CRYSTAL",
+    "name": "魔導クリスタル",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_BOOTS": {
+    "id": "ITEM_BOOTS",
+    "name": "ヘルメスの神足靴",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_GAUNTLET": {
+    "id": "ITEM_GAUNTLET",
+    "name": "破壊の鋼鉄籠手",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_CANDLE": {
+    "id": "ITEM_CANDLE",
+    "name": "儀式の蝋燭",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 13,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "ITEM_METEOR": {
+    "id": "ITEM_METEOR",
+    "name": "破滅の召喚隕石",
+    "category": "FANTASY",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 20,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SKULL": {
+    "id": "MON_SKULL",
+    "name": "ドクロモンスター",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 16,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_GHOST": {
+    "id": "MON_GHOST",
+    "name": "浮遊する亡霊",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "MON_BAT": {
+    "id": "MON_BAT",
+    "name": "夜魔コウモリ",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_CAT": {
+    "id": "MON_CAT",
+    "name": "黒猫の横顔",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_DOG": {
+    "id": "MON_DOG",
+    "name": "忠誠の猟犬",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_BEAR": {
+    "id": "MON_BEAR",
+    "name": "荒ぶる巨熊",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_FROG": {
+    "id": "MON_FROG",
+    "name": "毒沼の蛙",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 15,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_BIRD": {
+    "id": "MON_BIRD",
+    "name": "大空の疾風鳥",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_FISH": {
+    "id": "MON_FISH",
+    "name": "深海の古代魚",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SPIDER": {
+    "id": "MON_SPIDER",
+    "name": "迷宮の毒蜘蛛",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SCORPION": {
+    "id": "MON_SCORPION",
+    "name": "砂漠の黒蠍",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 10,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SNAKE": {
+    "id": "MON_SNAKE",
+    "name": "大蛇の威嚇",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 19,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_BUTTERFLY": {
+    "id": "MON_BUTTERFLY",
+    "name": "幻惑の妖蝶",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "MON_JELLYFISH": {
+    "id": "MON_JELLYFISH",
+    "name": "発光クラゲ",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 23,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_CRAB": {
+    "id": "MON_CRAB",
+    "name": "剛殻の大蟹",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SQUID": {
+    "id": "MON_SQUID",
+    "name": "深淵のイカ",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 17,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "MON_OWL": {
+    "id": "MON_OWL",
+    "name": "知恵の夜梟",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_DRAGON": {
+    "id": "MON_DRAGON",
+    "name": "竜王の咆哮",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_UNICORN": {
+    "id": "MON_UNICORN",
+    "name": "一角獣の角",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 11,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_PENGUIN": {
+    "id": "MON_PENGUIN",
+    "name": "極地の皇帝ペンギン",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_ALIEN": {
+    "id": "MON_ALIEN",
+    "name": "未知の異星人",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_ROBOT": {
+    "id": "MON_ROBOT",
+    "name": "古代機巧兵",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_ZOMBIE": {
+    "id": "MON_ZOMBIE",
+    "name": "地を這う死霊の手",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 18,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_DEVIL": {
+    "id": "MON_DEVIL",
+    "name": "煉獄の小悪魔",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_WOLF": {
+    "id": "MON_WOLF",
+    "name": "孤高の銀狼",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_FOX": {
+    "id": "MON_FOX",
+    "name": "九尾の妖狐",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_PANDA": {
+    "id": "MON_PANDA",
+    "name": "森の熊猫",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_DOLPHIN": {
+    "id": "MON_DOLPHIN",
+    "name": "跳躍の白海豚",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_TURTLE": {
+    "id": "MON_TURTLE",
+    "name": "玄武の巨亀",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "MON_BEE": {
+    "id": "MON_BEE",
+    "name": "毒針の女王蜂",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 12,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_ELEPHANT": {
+    "id": "MON_ELEPHANT",
+    "name": "巨象の守護神",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_LION": {
+    "id": "MON_LION",
+    "name": "百獣の獅子王",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 23,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "MON_SHARK": {
+    "id": "MON_SHARK",
+    "name": "捕食の白鮫",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 15,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_CHAMELEON": {
+    "id": "MON_CHAMELEON",
+    "name": "擬態のカメレオン",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "MON_TREANT": {
+    "id": "MON_TREANT",
+    "name": "古代の樹木精霊",
+    "category": "CREATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_OU": {
+    "id": "KANJI_OU",
+    "name": "漢字: 王 (支配者)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 9,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_SHIN": {
+    "id": "KANJI_SHIN",
+    "name": "漢字: 神 (神性)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 23,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_KA": {
+    "id": "KANJI_KA",
+    "name": "漢字: 火 (紅蓮)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 15,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_SUI": {
+    "id": "KANJI_SUI",
+    "name": "漢字: 水 (清流)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 7,
+    "p2Moves": 7,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_MOKU": {
+    "id": "KANJI_MOKU",
+    "name": "漢字: 木 (大樹)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 4,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_KIN": {
+    "id": "KANJI_KIN",
+    "name": "漢字: 金 (黄金)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_DO": {
+    "id": "KANJI_DO",
+    "name": "漢字: 土 (大地)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 16,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_NICHI": {
+    "id": "KANJI_NICHI",
+    "name": "漢字: 日 (太陽)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 12,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_GETSU": {
+    "id": "KANJI_GETSU",
+    "name": "漢字: 月 (月光)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 8,
+    "p2Moves": 8,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_TEN": {
+    "id": "KANJI_TEN",
+    "name": "漢字: 天 (蒼天)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 10,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_CHI": {
+    "id": "KANJI_CHI",
+    "name": "漢字: 地 (大地)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 26,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_RYU": {
+    "id": "KANJI_RYU",
+    "name": "漢字: 竜 (魔竜)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 15,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_CHIKARA": {
+    "id": "KANJI_CHIKARA",
+    "name": "漢字: 力 (剛腕)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 14,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_KOKORO": {
+    "id": "KANJI_KOKORO",
+    "name": "漢字: 心 (精神)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 11,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_HIKARI": {
+    "id": "KANJI_HIKARI",
+    "name": "漢字: 光 (聖光)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 14,
+    "p2Moves": 11,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_YAMI": {
+    "id": "KANJI_YAMI",
+    "name": "漢字: 闇 (暗黒)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_TSURUGI": {
+    "id": "KANJI_TSURUGI",
+    "name": "漢字: 刃 (鋭利)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 18,
+    "blackCount": 9,
+    "whiteCount": 9,
+    "p1Moves": 13,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "KANJI_MA": {
+    "id": "KANJI_MA",
+    "name": "漢字: 魔 (混沌)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "JP_TORII": {
+    "id": "JP_TORII",
+    "name": "鳥居 (神社の門)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 9,
+    "p2Moves": 9,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      }
+    ]
+  },
+  "JP_FUJI": {
+    "id": "JP_FUJI",
+    "name": "霊峰富士山",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "JP_FAN": {
+    "id": "JP_FAN",
+    "name": "雅なる扇子",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "JP_SAKURA": {
+    "id": "JP_SAKURA",
+    "name": "桜の花びら",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 16,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "JP_MAGATAMA": {
+    "id": "JP_MAGATAMA",
+    "name": "勾玉 (三種の神器)",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "JP_SHURIKEN": {
+    "id": "JP_SHURIKEN",
+    "name": "忍びの手裏剣",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "JP_BONSAI": {
+    "id": "JP_BONSAI",
+    "name": "悠久の盆栽",
+    "category": "KANJI",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 21,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_SUNBURST": {
+    "id": "NAT_SUNBURST",
+    "name": "天光サンバースト",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 24,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_FULL_MOON": {
+    "id": "NAT_FULL_MOON",
+    "name": "満月の光彩",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_SNOWFLAKE": {
+    "id": "NAT_SNOWFLAKE",
+    "name": "氷雪の六花",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_FLAME": {
+    "id": "NAT_FLAME",
+    "name": "紅蓮の猛火",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_WATER_DROP": {
+    "id": "NAT_WATER_DROP",
+    "name": "蒼海の雫",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 19,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_WHIRLPOOL": {
+    "id": "NAT_WHIRLPOOL",
+    "name": "深淵の渦潮",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_TORNADO": {
+    "id": "NAT_TORNADO",
+    "name": "荒れ狂う竜巻",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_SPROUT": {
+    "id": "NAT_SPROUT",
+    "name": "目覚めの双葉",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 17,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_CLOVER_4": {
+    "id": "NAT_CLOVER_4",
+    "name": "幸福の四ツ葉",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 42,
+    "blackCount": 21,
+    "whiteCount": 21,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_ROSE": {
+    "id": "NAT_ROSE",
+    "name": "情熱の紅薔薇",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 20,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_TULIP": {
+    "id": "NAT_TULIP",
+    "name": "春告げチューリップ",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 34,
+    "blackCount": 17,
+    "whiteCount": 17,
+    "p1Moves": 25,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_PLANET_SATURN": {
+    "id": "NAT_PLANET_SATURN",
+    "name": "土星の輪",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 27,
+    "p2Moves": 27,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_GALAXY": {
+    "id": "NAT_GALAXY",
+    "name": "渦巻く小宇宙",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_COMET": {
+    "id": "NAT_COMET",
+    "name": "天空の流星彗星",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 19,
+    "p2Moves": 16,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_RAIN_CLOUD": {
+    "id": "NAT_RAIN_CLOUD",
+    "name": "雨降る雷雲",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 24,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_RAINBOW": {
+    "id": "NAT_RAINBOW",
+    "name": "希望の虹架け橋",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 16,
+    "blackCount": 8,
+    "whiteCount": 8,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_VOLCANO": {
+    "id": "NAT_VOLCANO",
+    "name": "噴火する活火山",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 30,
+    "blackCount": 15,
+    "whiteCount": 15,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_MOUNTAIN": {
+    "id": "NAT_MOUNTAIN",
+    "name": "連峰の霊峰",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 20,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_LIGHTNING_BOLT": {
+    "id": "NAT_LIGHTNING_BOLT",
+    "name": "神罰の紫電",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 13,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_ECLIPSE": {
+    "id": "NAT_ECLIPSE",
+    "name": "皆既日食",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 15,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_AURORA": {
+    "id": "NAT_AURORA",
+    "name": "極光のオーロラ",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 22,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_CRYSTAL_CAVE": {
+    "id": "NAT_CRYSTAL_CAVE",
+    "name": "地底の水晶柱",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_OCEAN_WAVE": {
+    "id": "NAT_OCEAN_WAVE",
+    "name": "怒涛の大波",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 19,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_DESERT_CACTUS": {
+    "id": "NAT_DESERT_CACTUS",
+    "name": "砂漠のサボテン",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 20,
+    "blackCount": 10,
+    "whiteCount": 10,
+    "p1Moves": 14,
+    "p2Moves": 12,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "NAT_METEOR_SHOWER": {
+    "id": "NAT_METEOR_SHOWER",
+    "name": "降り注ぐ流星群",
+    "category": "NATURE",
+    "gridSize": 10,
+    "totalStones": 10,
+    "blackCount": 5,
+    "whiteCount": 5,
+    "p1Moves": 4,
+    "p2Moves": 4,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_SUSHI": {
+    "id": "FOOD_SUSHI",
+    "name": "極上まぐろ握り寿司",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_RAMEN": {
+    "id": "FOOD_RAMEN",
+    "name": "秘伝の極上ラーメン",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_PIZZA": {
+    "id": "FOOD_PIZZA",
+    "name": "窯焼きピザスライス",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_BURGER": {
+    "id": "FOOD_BURGER",
+    "name": "特大チーズバーガー",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_ONIGIRI": {
+    "id": "FOOD_ONIGIRI",
+    "name": "伝統の三角おにぎり",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_CURRY": {
+    "id": "FOOD_CURRY",
+    "name": "激辛魔導カリー",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_BEER": {
+    "id": "FOOD_BEER",
+    "name": "乾杯の黄金ジョッキ",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 27,
+    "p2Moves": 27,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_COFFEE": {
+    "id": "FOOD_COFFEE",
+    "name": "芳醇のホット珈琲",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_ICECREAM": {
+    "id": "FOOD_ICECREAM",
+    "name": "三層ソフトクリーム",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_CAKE": {
+    "id": "FOOD_CAKE",
+    "name": "祝福のアニバーサリーケーキ",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 42,
+    "blackCount": 21,
+    "whiteCount": 21,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_DONUT": {
+    "id": "FOOD_DONUT",
+    "name": "チョコがけドーナツ",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 36,
+    "blackCount": 18,
+    "whiteCount": 18,
+    "p1Moves": 26,
+    "p2Moves": 26,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "FOOD_CANDY": {
+    "id": "FOOD_CANDY",
+    "name": "魔法のペロペロキャンディ",
+    "category": "FOOD",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_SOCCER": {
+    "id": "SPORT_SOCCER",
+    "name": "白黒サッカーボール",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_BASKET": {
+    "id": "SPORT_BASKET",
+    "name": "熱闘バスケットボール",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_BASEBALL": {
+    "id": "SPORT_BASEBALL",
+    "name": "栄光の硬式野球ボール",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 22,
+    "blackCount": 11,
+    "whiteCount": 11,
+    "p1Moves": 5,
+    "p2Moves": 5,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_TENNIS": {
+    "id": "SPORT_TENNIS",
+    "name": "超速テニスボール",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 24,
+    "blackCount": 12,
+    "whiteCount": 12,
+    "p1Moves": 10,
+    "p2Moves": 10,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_DICE": {
+    "id": "SPORT_DICE",
+    "name": "運命の賽の目ダイス",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 13,
+    "p2Moves": 13,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_CARD_ACE": {
+    "id": "SPORT_CARD_ACE",
+    "name": "スペードのエース [A]",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 42,
+    "blackCount": 21,
+    "whiteCount": 21,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_CHESS_KNIGHT": {
+    "id": "SPORT_CHESS_KNIGHT",
+    "name": "チェス: ナイト(駿馬)",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 28,
+    "p2Moves": 28,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_CHESS_QUEEN": {
+    "id": "SPORT_CHESS_QUEEN",
+    "name": "チェス: クイーン(女王)",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 15,
+    "p2Moves": 15,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_GUITAR": {
+    "id": "SPORT_GUITAR",
+    "name": "激奏エレキギター",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 28,
+    "blackCount": 14,
+    "whiteCount": 14,
+    "p1Moves": 19,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 0,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_DRUM": {
+    "id": "SPORT_DRUM",
+    "name": "轟音スネアドラム",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 48,
+    "blackCount": 24,
+    "whiteCount": 24,
+    "p1Moves": 29,
+    "p2Moves": 29,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_TROPHY": {
+    "id": "SPORT_TROPHY",
+    "name": "優勝者の黄金トロフィー",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "SPORT_MEDAL": {
+    "id": "SPORT_MEDAL",
+    "name": "栄誉のゴールドメダル",
+    "category": "SPORTS",
+    "gridSize": 10,
+    "totalStones": 26,
+    "blackCount": 13,
+    "whiteCount": 13,
+    "p1Moves": 18,
+    "p2Moves": 18,
+    "stones": [
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_TOKYO_TOWER": {
+    "id": "LAND_TOKYO_TOWER",
+    "name": "赤き電波塔 (東京タワー)",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_FUJI": {
+    "id": "LAND_FUJI",
+    "name": "霊峰富士の雪化粧",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 23,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_PYRAMID": {
+    "id": "LAND_PYRAMID",
+    "name": "砂漠の大ピラミッド",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 54,
+    "blackCount": 27,
+    "whiteCount": 27,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_SPHINX": {
+    "id": "LAND_SPHINX",
+    "name": "古代の守護神スフィンクス",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 25,
+    "p2Moves": 25,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_COLOSSEUM": {
+    "id": "LAND_COLOSSEUM",
+    "name": "円形闘技場コロッセオ",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 54,
+    "blackCount": 27,
+    "whiteCount": 27,
+    "p1Moves": 29,
+    "p2Moves": 29,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_EIFFEL": {
+    "id": "LAND_EIFFEL",
+    "name": "鉄の貴婦人エッフェル塔",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_LIBERTY": {
+    "id": "LAND_LIBERTY",
+    "name": "自由の女神の松明",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 21,
+    "p2Moves": 17,
+    "stones": [
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_MOAI": {
+    "id": "LAND_MOAI",
+    "name": "巨石モアイ像",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 32,
+    "blackCount": 16,
+    "whiteCount": 16,
+    "p1Moves": 17,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_ARCH": {
+    "id": "LAND_ARCH",
+    "name": "凱旋門",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 52,
+    "blackCount": 26,
+    "whiteCount": 26,
+    "p1Moves": 25,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 0,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "LAND_PARTHENON": {
+    "id": "LAND_PARTHENON",
+    "name": "パルテノン神殿",
+    "category": "LANDMARK",
+    "gridSize": 10,
+    "totalStones": 52,
+    "blackCount": 26,
+    "whiteCount": 26,
+    "p1Moves": 14,
+    "p2Moves": 14,
+    "stones": [
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_PHOENIX": {
+    "id": "BEAST_PHOENIX",
+    "name": "不死鳥フェニックス",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 22,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 0,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_LEVIATHAN": {
+    "id": "BEAST_LEVIATHAN",
+    "name": "深海獣リヴァイアサン",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 44,
+    "blackCount": 22,
+    "whiteCount": 22,
+    "p1Moves": 22,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_BEHEMOTH": {
+    "id": "BEAST_BEHEMOTH",
+    "name": "大地神ベヒーモス",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 52,
+    "blackCount": 26,
+    "whiteCount": 26,
+    "p1Moves": 24,
+    "p2Moves": 24,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 8,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 8,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_OUROBOROS": {
+    "id": "BEAST_OUROBOROS",
+    "name": "終焉の蛇ウロボロス",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 40,
+    "blackCount": 20,
+    "whiteCount": 20,
+    "p1Moves": 24,
+    "p2Moves": 23,
+    "stones": [
+      {
+        "r": 0,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_PEGASUS": {
+    "id": "BEAST_PEGASUS",
+    "name": "天空の白馬ペガサス",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 26,
+    "p2Moves": 22,
+    "stones": [
+      {
+        "r": 0,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_REAPER": {
+    "id": "BEAST_REAPER",
+    "name": "魂刈りの死神",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 50,
+    "blackCount": 25,
+    "whiteCount": 25,
+    "p1Moves": 26,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 0,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_SERAPHIM": {
+    "id": "BEAST_SERAPHIM",
+    "name": "六翼の熾天使",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 50,
+    "blackCount": 25,
+    "whiteCount": 25,
+    "p1Moves": 20,
+    "p2Moves": 20,
+    "stones": [
+      {
+        "r": 0,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_LUCIFER": {
+    "id": "BEAST_LUCIFER",
+    "name": "深紅の堕天使",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 38,
+    "blackCount": 19,
+    "whiteCount": 19,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 0,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 0,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 0,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_CERBERUS": {
+    "id": "BEAST_CERBERUS",
+    "name": "冥界の三頭犬",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 52,
+    "blackCount": 26,
+    "whiteCount": 26,
+    "p1Moves": 19,
+    "p2Moves": 19,
+    "stones": [
+      {
+        "r": 1,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 2
+      }
+    ]
+  },
+  "BEAST_KRAKEN": {
+    "id": "BEAST_KRAKEN",
+    "name": "大洋の魔獣クラーケン",
+    "category": "MYTH",
+    "gridSize": 10,
+    "totalStones": 46,
+    "blackCount": 23,
+    "whiteCount": 23,
+    "p1Moves": 21,
+    "p2Moves": 21,
+    "stones": [
+      {
+        "r": 1,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 1,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 1,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 2,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 2,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 3,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 4,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 5,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 6,
+        "color": 2
+      },
+      {
+        "r": 3,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 3,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 1,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 4,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 4,
+        "c": 8,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 1,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 2,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 3,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 6,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 7,
+        "color": 2
+      },
+      {
+        "r": 5,
+        "c": 8,
+        "color": 1
+      },
+      {
+        "r": 5,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 6,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 6,
+        "c": 9,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 0,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 2,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 4,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 5,
+        "color": 2
+      },
+      {
+        "r": 7,
+        "c": 7,
+        "color": 1
+      },
+      {
+        "r": 7,
+        "c": 9,
+        "color": 2
+      }
+    ]
+  }
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { DOT_ART_LIBRARY };
+}
