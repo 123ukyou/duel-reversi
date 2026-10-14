@@ -1872,8 +1872,6 @@ canPlace(r, c, color, activeItem = null) {
     }
     return false;
   }
-    // （以降、通常のオセロの挟み判定ロジックが続きます）
-
 
   // --- 石の色＆スキン属性によるパッシブ能力システム ---
   applyStoneColorPassives(player, isOverride, isCorner, flips, moveR = player.cursor.r, moveC = player.cursor.c) {
